@@ -32,7 +32,7 @@
 </template>
 
 <script setup>
-import itemPicture from '../img/pancake.png'
+const itemPicture = 'https://ik.imagekit.io/realisursi/pancake.png'
 import api from '../services/api'
 </script>
 
