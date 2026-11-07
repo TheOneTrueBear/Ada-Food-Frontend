@@ -65,3 +65,39 @@ async function GetRecipes(){
         }
 }
 </script>
+
+<style>
+
+#breakfast .items-grid{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#breakfast .item{
+    display: grid;
+    grid-template-rows: auto;
+    align-items: center;
+}
+
+#breakfast .item > div{
+    align-items: center;
+    margin: 10px;
+    
+}
+
+#breakfast h3{
+    font-family: Matcha;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#breakfast img{
+    display:block;
+    margin:1rem;
+    width: 90%;
+    height: 90%;
+}
+</style>
