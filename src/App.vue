@@ -1,11 +1,9 @@
 <script setup>
-import Banner from './components/Banner.vue'
+import Banner from './views/Banner.vue'
 import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <RouterView name="nav" />
   <Banner />
-  <RouterView name="director" />
-  <RouterView name="default" />
+  <RouterView />
 </template>

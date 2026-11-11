@@ -1,4 +1,5 @@
 <template>
+
     <div>
         <form>
             <input type="text" @input="FilterByName(name = $event.target.value)" 
@@ -34,7 +35,11 @@
 <script setup>
 import api from '../services/api'
 import {ref, onMounted} from 'vue'
+//import director from './director.vue'
 
+const props = defineProps({
+    tag: String
+})
 const allRecipes = ref([])
 const recipes = ref([])
 const name = ref('')
@@ -51,7 +56,7 @@ function FilterByName(name){
 
 async function GetRecipes(){
     try{
-        const response = await api.get('/Recipe?tag=Lunch', {
+        const response = await api.get(`/Recipe?tag=${props.tag}`, {
             headers: {
                 'Content-Type': 'application/json'
                     }

@@ -8,17 +8,11 @@
     </form>
 </template>
 
-<script>
-    export default{
-        data(){
-            return {
-                user: {username: '', password: ''}
-            }
-        },
-    methods:{
-        SaveUser(){
-            
-        }
-    }
-}
+<script setup>
+import { ref } from 'vue'
+
+const user = ref({
+    username : '',
+    password : ''
+})
 </script>
